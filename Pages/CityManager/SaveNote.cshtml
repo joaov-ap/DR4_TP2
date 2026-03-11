@@ -1,0 +1,42 @@
+@page
+@model tp2.Pages.CityManager.SaveNoteModel
+
+@{
+    ViewData["Title"] = "Salvar Nota";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white text-center text-black">
+                    <h4 class="mb-0">Salvar Nota</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label asp-for="Input.Content" class="form-label">Conteúdo</label>
+                            <textarea asp-for="Input.Content" class="form-control" rows="5" placeholder="Digite sua nota..."></textarea>
+                            <span asp-validation-for="Input.Content" class="text-danger small"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Salvar</button>
+                    </form>
+                </div>
+            </div>
+
+            @if (Model.SavedFileName != null)
+            {
+                <div class="alert alert-success mt-4">
+                    Arquivo salvo com sucesso!
+                    <a href="/files/@Model.SavedFileName" download class="alert-link">
+                        Baixar @Model.SavedFileName
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2l0eU1hbmFnZXIvQ3JlYXRlQ291bnRyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/joao/Documentos/C\#/tp2/Pages/CityManager/SaveNote.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2l0eU1hbmFnZXIvU2F2ZU5vdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/joao/Documentos/C\#/tp2/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
