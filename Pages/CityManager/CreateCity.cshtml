@@ -15,8 +15,9 @@
                 <div class="card-body">
                     <form method="post">
                         <div class="mb-3">
-                            <label for="cityName" class="form-label">Nome da cidade</label>
-                            <input type="text" id="cityName" name="cityName" class="form-control" placeholder="Ex: Rio de Janeiro"/>
+                            <label asp-for="Input.CityName" class="form-label">Nome da cidade</label>
+                            <input asp-for="Input.CityName" class="form-control" placeholder="Ex: Rio de Janeiro"/>
+                            <span asp-validation-for="Input.CityName" class="text-danger small"></span>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Enviar</button>
                     </form>
