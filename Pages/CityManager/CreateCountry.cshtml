@@ -1,0 +1,45 @@
+@page
+@model tp2.Pages.CityManager.CreateCountryModel
+
+@{
+    ViewData["Title"] = "Cadastro de País";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white text-center text-black">
+                    <h4 class="mb-0">Cadastro de País</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label asp-for="Input.CountryName" class="form-label">Nome do país</label>
+                            <input asp-for="Input.CountryName" class="form-control" placeholder="Ex: Brasil"/>
+                            <span asp-validation-for="Input.CountryName" class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Input.CountryCode" class="form-label">Código do país</label>
+                            <input asp-for="Input.CountryCode" class="form-control" placeholder="Ex: BR"/>
+                            <span asp-validation-for="Input.CountryCode" class="text-danger small"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+
+            @if (Model.SubmittedCountry != null)
+            {
+                <div class="alert alert-success mt-4" role="alert">
+                    País cadastrado: <strong>@Model.SubmittedCountry.CountryName</strong>
+                    (<strong>@Model.SubmittedCountry.CountryCode</strong>)
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
