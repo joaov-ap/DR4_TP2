@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wEZ4i27OeiH2Rv9NPfB9MQYRnn2GpihyUeY1n8CHsMU=",
+  "Hash": "g/6Po5j4G09Ef286QPWESzofYaJofWdU0vKzEawCoNM=",
   "Source": "tp2",
   "BasePath": "_content/tp2",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/files/note-20260311-144035.txt"
+    },
+    {
+      "Identity": "/home/joao/Documentos/C#/tp2/wwwroot/files/note-20260311-144259.txt",
+      "SourceId": "tp2",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/joao/Documentos/C#/tp2/wwwroot/",
+      "BasePath": "_content/tp2",
+      "RelativePath": "files/note-20260311-144259.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/note-20260311-144259.txt"
     },
     {
       "Identity": "/home/joao/Documentos/C#/tp2/wwwroot/js/site.js",

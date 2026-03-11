@@ -7,9 +7,9 @@ namespace tp2.Pages.CityManager;
 public class CreateCountryModel : PageModel
 {
     [BindProperty]
-    public List<InputModel> Input { get; set; } = new();
+    public List<InputModel> Input { get; set; }
 
-    public List<Country> SubmittedCountries { get; set; } = new();
+    public List<Country> SubmittedCountries { get; set; }
 
     public void OnGet()
     {
@@ -19,6 +19,23 @@ public class CreateCountryModel : PageModel
 
     public void OnPost()
     {
+        for (int i = 0; i < Input.Count; i++)
+        {
+            var name = Input[i].CountryName;
+            var code = Input[i].CountryCode;
+
+            if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(code))
+            {
+                if (char.ToUpper(name[0]) != char.ToUpper(code[0]))
+                {
+                    ModelState.AddModelError(
+                        $"Input[{i}].CountryCode",
+                        "O código deve começar com a mesma letra que o nome do país."
+                    );
+                }
+            }
+        }
+
         if (!ModelState.IsValid)
             return;
 
