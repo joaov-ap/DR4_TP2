@@ -7,22 +7,26 @@ namespace tp2.Pages.CityManager;
 public class CreateCountryModel : PageModel
 {
     [BindProperty]
-    public InputModel Input { get; set; }
+    public List<InputModel> Input { get; set; } = new();
 
-    public Country? SubmittedCountry { get; set; }
+    public List<Country> SubmittedCountries { get; set; } = new();
 
-    public void OnGet() { }
+    public void OnGet()
+    {
+        for (int i = 0; i < 5; i++)
+            Input.Add(new InputModel());
+    }
 
     public void OnPost()
     {
         if (!ModelState.IsValid)
             return;
 
-        SubmittedCountry = new Country
+        SubmittedCountries = Input.Select(i => new Country
         {
-            CountryName = Input.CountryName,
-            CountryCode = Input.CountryCode
-        };
+            CountryName = i.CountryName,
+            CountryCode = i.CountryCode
+        }).ToList();
     }
 
     public class InputModel

@@ -7,33 +7,45 @@
 
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="card shadow-sm">
                 <div class="card-header bg-white text-center text-black">
-                    <h4 class="mb-0">Cadastro de País</h4>
+                    <h4 class="mb-0">Cadastro de Países</h4>
                 </div>
                 <div class="card-body">
                     <form method="post">
-                        <div class="mb-3">
-                            <label asp-for="Input.CountryName" class="form-label">Nome do país</label>
-                            <input asp-for="Input.CountryName" class="form-control" placeholder="Ex: Brasil"/>
-                            <span asp-validation-for="Input.CountryName" class="text-danger small"></span>
-                        </div>
-                        <div class="mb-3">
-                            <label asp-for="Input.CountryCode" class="form-label">Código do país</label>
-                            <input asp-for="Input.CountryCode" class="form-control" placeholder="Ex: BR"/>
-                            <span asp-validation-for="Input.CountryCode" class="text-danger small"></span>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+                        @for (int i = 0; i < Model.Input.Count; i++)
+                        {
+                            <div class="row mb-3">
+                                <div class="col-md-8">
+                                    <input asp-for="Input[i].CountryName" class="form-control" placeholder="Ex: Brasil"/>
+                                    <span asp-validation-for="Input[i].CountryName" class="text-danger small"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    <input asp-for="Input[i].CountryCode" class="form-control" placeholder="Ex: BR"/>
+                                    <span asp-validation-for="Input[i].CountryCode" class="text-danger small"></span>
+                                </div>
+                            </div>
+                        }
+                        <button type="submit" class="btn btn-primary w-100">Cadastrar Todos</button>
                     </form>
                 </div>
             </div>
 
-            @if (Model.SubmittedCountry != null)
+            @if (Model.SubmittedCountries.Any())
             {
-                <div class="alert alert-success mt-4" role="alert">
-                    País cadastrado: <strong>@Model.SubmittedCountry.CountryName</strong>
-                    (<strong>@Model.SubmittedCountry.CountryCode</strong>)
+                <div class="card mt-4 shadow-sm">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Países Cadastrados</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        @foreach (var country in Model.SubmittedCountries)
+                        {
+                            <li class="list-group-item">
+                                <strong>@country.CountryCode</strong> — @country.CountryName
+                            </li>
+                        }
+                    </ul>
                 </div>
             }
         </div>
