@@ -1,0 +1,21 @@
+@page "{cityName}"
+@model tp2.Pages.CityManager.CityDetailsModel
+
+@{
+    ViewData["Title"] = "Detalhes da Cidade";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white text-center text-black">
+                    <h4 class="mb-0">Detalhes da Cidade</h4>
+                </div>
+                <div class="card-body text-center">
+                    <p class="fs-5">Você está vendo detalhes de: <strong>@Model.CityName</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

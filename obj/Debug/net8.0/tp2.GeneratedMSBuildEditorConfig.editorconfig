@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/joao/Documentos/C#/tp2
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/joao/Documentos/C\#/tp2/Pages/CityManager/CityDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2l0eU1hbmFnZXIvQ2l0eURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/joao/Documentos/C\#/tp2/Pages/CityManager/CreateCity.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2l0eU1hbmFnZXIvQ3JlYXRlQ2l0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
