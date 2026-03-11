@@ -31,6 +31,7 @@ public class CreateCountryModel : PageModel
         public string CountryName { get; set; }
 
         [Required(ErrorMessage = "O código do país é obrigatório.")]
+        [StringLength(2, MinimumLength = 2, ErrorMessage = "O código deve ter exatamente 2 caracteres.")]
         public string CountryCode { get; set; }
     }
 }
