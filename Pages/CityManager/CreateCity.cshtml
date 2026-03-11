@@ -1,0 +1,22 @@
+@page
+@model tp2.Pages.CityManager.CreateCityModel
+
+@{
+    ViewData["Title"] = "Cadastro de Cidade Turistica";
+}
+
+<h2>Cadastro de Cidade Turística</h2>
+
+<form method="post">
+    <div>
+        <label class="form-label" asp-for="CityName">Nome da cidade:</label>
+        <input class="form-control" asp-for="CityName"/>
+    </div>
+    <br/>
+    <button class="btn btn-primary" type="submit">Enviar</button>
+</form>
+
+@if (Model.SubmittedCity != null)
+{
+    <p>Cidade criada: <strong>@Model.SubmittedCity</strong></p>
+}
