@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/home/joao/Documentos/C#/tp2/wwwroot/files/note-20260311-143940.txt",
+      "PackagePath": "staticwebassets/files/note-20260311-143940.txt"
+    },
+    {
+      "Id": "/home/joao/Documentos/C#/tp2/wwwroot/files/note-20260311-144035.txt",
+      "PackagePath": "staticwebassets/files/note-20260311-144035.txt"
+    },
+    {
       "Id": "/home/joao/Documentos/C#/tp2/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

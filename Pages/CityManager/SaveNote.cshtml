@@ -8,6 +8,7 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
+
             <div class="card shadow-sm">
                 <div class="card-header bg-white text-center text-black">
                     <h4 class="mb-0">Salvar Nota</h4>
@@ -33,6 +34,41 @@
                     </a>
                 </div>
             }
+
+            @if (Model.FileNames.Any())
+            {
+                <div class="card mt-4 shadow-sm">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Arquivos Salvos</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        @foreach (var file in Model.FileNames)
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a asp-page="/CityManager/SaveNote" asp-route-fileName="@file">
+                                    @file
+                                </a>
+                                <a href="/files/@file" download class="btn btn-sm btn-outline-secondary">
+                                    Baixar
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            @if (Model.SelectedFileContent != null)
+            {
+                <div class="card mt-4 shadow-sm">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">@Model.SelectedFileName</h5>
+                    </div>
+                    <div class="card-body">
+                        <pre class="mb-0">@Model.SelectedFileContent</pre>
+                    </div>
+                </div>
+            }
+
         </div>
     </div>
 </div>
