@@ -28,3 +28,4 @@
 /home/joao/Documentos/C#/tp2/obj/Debug/net8.0/tp2.pdb
 /home/joao/Documentos/C#/tp2/obj/Debug/net8.0/tp2.genruntimeconfig.cache
 /home/joao/Documentos/C#/tp2/obj/Debug/net8.0/ref/tp2.dll
+/home/joao/Documentos/C#/tp2/obj/Debug/net8.0/tp2.sourcelink.json
