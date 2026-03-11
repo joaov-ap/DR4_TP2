@@ -4,7 +4,7 @@ namespace tp2.Pages.CityManager;
 
 public class CityDetailsModel : PageModel
 {
-    public string CityName { get; set; } = string.Empty;
+    public string CityName { get; set; }
 
     public void OnGet(string cityName)
     {

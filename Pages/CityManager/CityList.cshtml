@@ -1,0 +1,28 @@
+@page
+@model tp2.Pages.CityManager.CityListModel
+
+@{
+    ViewData["Title"] = "Cidades Turísticas";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white text-center text-black">
+                    <h4 class="mb-0">Cidades Turísticas</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    @foreach (var city in Model.Cities)
+                    {
+                        <li class="list-group-item">
+                            <a asp-page="/CityManager/CityDetails" asp-route-cityName="@city">
+                                @city
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
